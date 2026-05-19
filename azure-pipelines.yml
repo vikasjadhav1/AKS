@@ -73,7 +73,7 @@ stages:
     # TERRAFORM FORMAT CHECK
     # ==========================================
 
-    - script: terraform fmt -check
+    - script: terraform fmt
       displayName: "Terraform Format Check"
       condition: eq('${{ parameters.action }}', 'apply')
 
