@@ -1,5 +1,33 @@
-# Object file
-*.o
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Terraform plan files
+tfplan
+*.plan
+
+# Sensitive variable files
+terraform.tfvars
+*.auto.tfvars
+
+# Terraform lock file (optional)
+# Keep this if working in team
+# .terraform.lock.hcl
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+*.pem
+*.key
 
 # Ada Library Information
 *.ali
