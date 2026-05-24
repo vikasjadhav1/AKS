@@ -9,3 +9,7 @@ terraform {
     }
   }
 }
+
+variable "acr_name" {
+  type = string
+}
