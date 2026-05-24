@@ -37,3 +37,13 @@ variable "storage_rg_name" {
 variable "keyvault_rg_name" {
   type = string
 }
+
+variable "acr_name" {
+  type    = string
+  default = "devaksacr001"
+}
+
+
+
+
+
