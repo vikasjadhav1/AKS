@@ -26,3 +26,19 @@ resource "azurerm_role_assignment" "acr_pull" {
 
   scope                = azurerm_container_registry.acr.id
 }
+
+# Azure DevOps Service Principal Object ID
+variable "azuredevops_sp_object_id" {
+  description = "Azure DevOps Service Principal Object ID"
+  type        = string
+}
+
+# Give Azure DevOps Service Principal permission to push images to ACR
+resource "azurerm_role_assignment" "acr_push_devops" {
+
+  principal_id         = var.azuredevops_sp_object_id
+
+  role_definition_name = "AcrPush"
+
+  scope                = azurerm_container_registry.acr.id
+}
